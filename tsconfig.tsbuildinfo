@@ -1,1 +1,1 @@
-{"root":["./src/index.ts","./src/commands/hello/index.ts","./src/commands/hello/world.ts"],"version":"5.9.3"}
+{"root":["./src/index.ts","./src/class/GenerateSchemaCommand.ts","./src/commands/json.ts","./src/commands/xml.ts","./src/helpers/commandIO.ts","./src/processors/jsonProcessor.ts","./src/processors/xmlProcessor.ts"],"version":"5.9.3"}
