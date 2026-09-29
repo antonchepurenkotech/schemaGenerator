@@ -19,6 +19,7 @@
     "@eslint/compat": "^1",
     "@oclif/prettier-config": "^0.2.1",
     "@oclif/test": "^4",
+    "@yao-pkg/pkg": "^6.22.0",
     "@types/chai": "^4",
     "@types/mocha": "^10.0.10",
     "@types/node": "^18.19.130",
@@ -62,9 +63,17 @@
       }
     }
   },
+  "pkg": {
+    "targets": ["node22-win-x64"],
+    "scripts": ["dist/**/*.js"],
+    "assets": ["oclif.manifest.json"],
+    "outputPath": "release",
+    "sea": true
+  },
   "repository": "antonchepurenkotech/schema",
   "scripts": {
     "build": "shx rm -rf dist && tsc -b",
+    "build:exe": "npm run build && oclif manifest && pkg .",
     "lint": "eslint",
     "postpack": "shx rm -f oclif.manifest.json",
     "posttest": "npm run lint",
